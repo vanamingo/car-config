@@ -29,17 +29,28 @@ app.get('/api/user', (req, res) => {
 });
 
 
-app.post('/api/updateUser', (req, res) => {
-    state.user = req.body; 
+app.post('/api/setVipUser', (req, res) => {
+    
+    state.user.vip = req.body.value; 
     return res.status(201).send(state.user);
-  });
+});
+
+app.post('/api/setPoliticianUser', (req, res) => {
+    state.user.politician = req.body.value; 
+    return res.status(201).send(state.user);
+});
+
+app.post('/api/setStreetRacerUser', (req, res) => {
+    state.user.streetRacer = req.body.value; 
+    return res.status(201).send(state.user);
+});
 
   app.post('/api/makeSelection', (req, res) => {
 
       state.selectionsMap[req.body.id].option = req.body.option;
 
       return res.status(201).send(getSelections());
-    });
+   });
 
 const isEnabled = function(config){
     return config.isEnabledByDefaut || 

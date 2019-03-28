@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "Get Configs",
+			"name": "Get Available Configs",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -54,7 +54,7 @@
 			"response": []
 		},
 		{
-			"name": "Selections",
+			"name": "Get Selections",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -78,23 +78,23 @@
 			"response": []
 		},
 		{
-			"name": "Update User",
+			"name": "SetUserVip",
 			"request": {
 				"method": "POST",
 				"header": [
 					{
 						"key": "Content-Type",
 						"name": "Content-Type",
-						"value": "application/json",
-						"type": "text"
+						"type": "text",
+						"value": "application/json"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"vip\": false,\r\n   \"streetRacer\": false,\r\n    \"politician\": false\r\n}"
+					"raw": "{\r\n    \"value\": true\r\n}"
 				},
 				"url": {
-					"raw": "http://localhost:3000/api/updateUser",
+					"raw": "http://localhost:3000/api/setVipUser",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -102,7 +102,69 @@
 					"port": "3000",
 					"path": [
 						"api",
-						"updateUser"
+						"setVipUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SetUserPolitician",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"value\": true\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/setPoliticianUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"setPoliticianUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SetUserStreetRacer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"value\": true\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/setStreetRacerUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"setStreetRacerUser"
 					]
 				}
 			},
