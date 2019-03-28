@@ -184,7 +184,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\": \"MOTOR\",\r\n   \"option\": \"M1\"\r\n}"
+					"raw": "{\r\n   \"id\": \"MOTOR\",\r\n   \"option\": \"M1\"\r\n}"
 				},
 				"url": {
 					"raw": "http://localhost:3000/api/makeSelection",

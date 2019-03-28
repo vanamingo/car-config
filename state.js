@@ -39,7 +39,7 @@ const selectionsMap = selections.reduce((acc, current) => {
 const user = {
     vip: false,
     streetRacer: false,
-    politician: false
+   // politician: false
 }
 
 exports.state = {configs, selections, selectionsMap, user};

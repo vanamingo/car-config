@@ -35,10 +35,12 @@ app.post('/api/setVipUser', (req, res) => {
     return res.status(201).send(state.user);
 });
 
+/*
 app.post('/api/setPoliticianUser', (req, res) => {
     state.user.politician = req.body.value; 
     return res.status(201).send(state.user);
 });
+*/
 
 app.post('/api/setStreetRacerUser', (req, res) => {
     state.user.streetRacer = req.body.value; 
